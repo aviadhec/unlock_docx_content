@@ -1,0 +1,38 @@
+{
+  "name": "docx-unlocker",
+  "version": "1.0.0",
+  "description": "Aplikasi untuk membuka kunci dokumen DOCX yang diproteksi", 
+  "main": "main.js",
+  "author": "AAADC <avi.adhe@gmail.com>",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win --x64"
+  },
+  "build": {
+    "appId": "com.anda.docxunlocker",
+    "productName": "DOCX Unlocker",
+    "copyright": "Copyright © 2023 AAADC",
+    "win": {
+      "target": "portable",
+      "icon": "build/icon.ico",
+      "publisherName": "AAADC",
+      "fileAssociations": [
+        {
+          "ext": "docx",
+          "name": "Word Document",
+          "role": "Editor"
+        }
+      ]
+    },
+    "directories": {
+      "output": "dist"
+    }
+  },
+  "dependencies": {
+    "adm-zip": "^0.5.10"
+  },
+  "devDependencies": {
+    "electron": "^25.3.0",
+    "electron-builder": "^24.13.3"
+  }
+}
